@@ -1,0 +1,208 @@
+%ic {
+	font-family: "icons";
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+[class*="_icon-"] {
+	&:before {
+		@extend %ic;
+		display: block;
+	}
+}
+
+._icon-components-button .path1:before {
+	content: "\e900";
+	color: rgb(194, 207, 224);
+}
+._icon-components-button .path2:before {
+	content: "\e901";
+	margin-left: -1.2626953125em;
+	color: rgb(160, 174, 193);
+}
+._icon-components-button .path3:before {
+	content: "\e902";
+	margin-left: -1.2626953125em;
+	color: rgb(160, 174, 193);
+}
+._icon-components-footer .path1:before {
+	content: "\e903";
+	color: rgb(194, 207, 224);
+}
+._icon-components-footer .path2:before {
+	content: "\e904";
+	margin-left: -1.4541015625em;
+	color: rgb(194, 207, 224);
+}
+._icon-components-footer .path3:before {
+	content: "\e905";
+	margin-left: -1.4541015625em;
+	color: rgb(160, 174, 193);
+}
+._icon-components-header .path1:before {
+	content: "\e906";
+	color: rgb(194, 207, 224);
+}
+._icon-components-header .path2:before {
+	content: "\e907";
+	margin-left: -1.4541015625em;
+	color: rgb(194, 207, 224);
+}
+._icon-components-header .path3:before {
+	content: "\e908";
+	margin-left: -1.4541015625em;
+	color: rgb(160, 174, 193);
+}
+._icon-components-socials .path1:before {
+	content: "\e909";
+	color: rgb(194, 207, 224);
+}
+._icon-components-socials .path2:before {
+	content: "\e90a";
+	margin-left: -1em;
+	color: rgb(235, 239, 242);
+}
+._icon-components-socials .path3:before {
+	content: "\e90b";
+	margin-left: -1em;
+	color: rgb(235, 239, 242);
+}
+._icon-components-socials .path4:before {
+	content: "\e90c";
+	margin-left: -1em;
+	color: rgb(235, 239, 242);
+}
+._icon-components-socials .path5:before {
+	content: "\e90d";
+	margin-left: -1em;
+	color: rgb(235, 239, 242);
+}
+._icon-settings-account .path1:before {
+	content: "\e92e";
+	color: rgb(194, 207, 224);
+}
+._icon-settings-account .path2:before {
+	content: "\e92f";
+	margin-left: -0.9521484375em;
+	color: rgb(194, 207, 224);
+}
+._icon-settings-account .path3:before {
+	content: "\e930";
+	margin-left: -0.9521484375em;
+	color: rgb(255, 255, 255);
+}
+._icon-components-divider:before {
+	content: "\e90e";
+}
+._icon-components-image:before {
+	content: "\e90f";
+}
+._icon-components-text:before {
+	content: "\e910";
+}
+._icon-components-video:before {
+	content: "\e911";
+}
+._icon-contact-clip:before {
+	content: "\e912";
+}
+._icon-contact-phone:before {
+	content: "\e913";
+}
+._icon-contact-task:before {
+	content: "\e914";
+}
+._icon-contact-email-fill:before {
+	content: "\e915";
+}
+._icon-contact-facebook:before {
+	content: "\e916";
+}
+._icon-contact-insert:before {
+	content: "\e917";
+}
+._icon-contact-new-activity:before {
+	content: "\e918";
+}
+._icon-contact-note:before {
+	content: "\e919";
+}
+._icon-contact-schedule:before {
+	content: "\e91a";
+}
+._icon-contact-text:before {
+	content: "\e91b";
+}
+._icon-contact-twitter:before {
+	content: "\e91c";
+}
+._icon-contact-website:before {
+	content: "\e91d";
+}
+._icon-menu-chat:before {
+	content: "\e91e";
+}
+._icon-menu-profile:before {
+	content: "\e91f";
+}
+._icon-menu-dashboard:before {
+	content: "\e920";
+}
+._icon-menu-deals:before {
+	content: "\e921";
+}
+._icon-menu-email:before {
+	content: "\e922";
+}
+._icon-menu-dots:before {
+	content: "\e923";
+}
+._icon-menu-tasks:before {
+	content: "\e924";
+}
+._icon-menu-sidebar:before {
+	content: "\e925";
+}
+._icon-other-accept:before {
+	content: "\e926";
+}
+._icon-other-back:before {
+	content: "\e927";
+}
+._icon-other-close:before {
+	content: "\e928";
+}
+._icon-other-delete:before {
+	content: "\e929";
+}
+._icon-other-edit:before {
+	content: "\e92a";
+}
+._icon-other-emoji:before {
+	content: "\e92b";
+}
+._icon-other-more:before {
+	content: "\e92c";
+}
+._icon-other-search:before {
+	content: "\e931";
+}
+._icon-settings-colleagues:before {
+	content: "\e932";
+}
+._icon-settings-integrations:before {
+	content: "\e933";
+}
+._icon-settings-bell-fill:before {
+	content: "\e934";
+}
+._icon-settings-tags:before {
+	content: "\e935";
+}
+._icon-other-bell:before {
+	content: "\e92d";
+}
