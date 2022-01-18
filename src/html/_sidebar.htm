@@ -1,39 +1,60 @@
 <div class="sidebar">
     <div class="sidebar__container">
-        <div class="site-name__block">    
-            <h1 class="site-name__text">Saas Kit</h1>
+        <div class="site-name">    
+            <a href="#" class="site-name__link link-name__full">Saas Kit</a>
+            <a href="#" class="site-name__link link-name__short">Saas</a>
         </div>
-<!-- ======================================================================================================= -->
-        <div class="sidebar-user__container">
-            <div class="sidebar-user__block">
+        <div class="sidebar-user">
+            <div class="sidebar-user__container">
                 <div class="sidebar-user__photo">
-                    <img src="@img/image2.png" class="photo-user__image" alt="User photo">
+                    <a href="#" class="photo-user__link"><img src="@img/image2.png" class="photo-user__image" alt="User photo"></a>
                 </div>
                 <div class="sidebar-user__info">
                     <div class="info-user__name">
-                        <h2 class="name-user__text">Sierra Ferguson</h2>
+                        <a href="#" class="name-user__link">Sierra Ferguson</a>
                     </div>
                     <div class="info-user__email">
-                        <h4 class="email-user__text">s.ferguson@gmail.com</h4></div>
+                        <a href="#" class="email-user__link">s.ferguson@gmail.com</a></div>
                 </div> 
             </div>
         </div>
-<!-- ======================================================================================================= -->
         <nav class="sidebar-nav">
             <ul class="sidebar-nav__menu">
-                <li class="sidebar-nav__list"><a href="#" class="sidebar-nav__link">Dashboard</a></li>
-                <li class="sidebar-nav__list"><a href="#" class="sidebar-nav__link">Tasks</a></li>
-                <li class="sidebar-nav__list"><a href="#" class="sidebar-nav__link">Email</a></li>
-                <li class="sidebar-nav__list"><a href="#" class="sidebar-nav__link">Contacts</a></li>
-                <li class="sidebar-nav__list"><a href="#" class="sidebar-nav__link">Chat</a></li>
-                <li class="sidebar-nav__list"><a href="#" class="sidebar-nav__link">Deals</a></li>
+                <li class="sidebar-nav__list"><a href="#" class="_icon-menu-dashboard sidebar-nav__link"><span>Dashboard</span></a></li>
+                <li class="sidebar-nav__list"><a href="#" class="_icon-menu-tasks sidebar-nav__link"><span>Tasks</span></a>
+                    <ul class="sub-sidebar-nav__menu">
+                        <li><a href="#" class="sub-sidebar-nav__link circle__yellow">Active</a></li>
+                        <li><a href="#" class="sub-sidebar-nav__link circle__green">Completed</a></li>
+                        <li><a href="#" class="sub-sidebar-nav__link circle__red">Ended</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar-nav__list"><a href="#" class="_icon-menu-email sidebar-nav__link"><span>Email</span></a>
+                    <ul class="sub-sidebar-nav__menu">
+                        <li><a href="#" class="sub-sidebar-nav__link circle__yellow">Draft</a></li>
+                        <li><a href="#" class="sub-sidebar-nav__link circle__purple">Scheduled</a></li>
+                        <li><a href="#" class="sub-sidebar-nav__link circle__green">Sent</a></li>
+                        <li><a href="#" class="sub-sidebar-nav__link circle__red">Archived</a></li>
+                    </ul>
+                </li>
+                <li class="sidebar-nav__list"><a href="#" class="_icon-menu-contacts sidebar-nav__link"><span>Contacts</span></a></li>
+                <li class="sidebar-nav__list"><a href="#" class="_icon-menu-chat sidebar-nav__link"><span>Chat</span></a></li>
+                <li class="sidebar-nav__list"><a href="#" class="_icon-menu-deals sidebar-nav__link"><span>Deals</span></a>
+                    <ul class="sub-sidebar-nav__menu">
+                        <li><a href="#" class="sub-sidebar-nav__link circle__yellow">Low</a></li>
+                        <li><a href="#" class="sub-sidebar-nav__link circle__green">High</a></li>
+                        <li><a href="#" class="sub-sidebar-nav__link circle__red">Urgent</a></li>
+                    </ul>
+                </li>
             </ul>
+            <span class="nav-divider"></span>
         </nav>
-        <div class="sidebar-settings">
-            <h3 class="sidebar-settings__link">Settings</h3>
+        <div class="sidebar-settings sidebar-nav__menu">
+            <a href="#" class="_icon-menu-settings sidebar-settings__link sidebar-nav__link"><span>Settings</span></a>
         </div>
         <div class="sidebar-toggle">
-            <h3 class="sidebar-toggle__link">Toggle sidebar</h3>
+            <div class="sidebar-toggle__container">
+                <button type="button" class="_icon-menu-toggle sidebar-toggle__button"><span>Toggle sidebar</span></button>              
+            </div>
         </div>
     </div>
-</div>
+</div>    

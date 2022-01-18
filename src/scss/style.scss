@@ -24,7 +24,7 @@ $mainTableBlack: #323c47;
 $mainTableGray: #707683;
 $mainGray: #90a0b7;
 $mainIconGray: #c2cfe0;
-$mainDarkerWhite: #ebeff2;
+$mainDivider: #ebeff2;
 $mainDarkBlueText: #334d6e;
 $mainBlue: #109cf1;
 $mainYellow: #ffb946;
@@ -77,10 +77,11 @@ body {
 .wrapper {
   min-height: 100%;
   display: flex;
+  // flex-direction: column;
   overflow: hidden;
   // Прижимаем footer
   > main {
-    flex: 1 1 auto;
+    // flex: 1 1 auto;
   }
   // Фикс для слайдеров
   > * {

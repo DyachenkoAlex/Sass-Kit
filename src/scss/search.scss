@@ -7,6 +7,8 @@
 		background-color: #fff;
 		display: flex;
 		align-items: center;
+		margin: 0;
+		flex-grow: 1;
 	}
 	&__block {	
 		position: relative;
@@ -47,13 +49,10 @@
 .search-block {
 	&__button {
 		display: flex;
-		align-items: center;
 		justify-content: end;
 		position: absolute;
-		top: 0;
+		top: rem(20.5);
 		right: rem(2);
-		height: rem(60);
-		width: rem(60);
 		font-size: rem(20);
 		color: $mainIconGray;
 		background-color: transparent;

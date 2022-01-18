@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="24"
+   height="24"
+   viewBox="0 0 24 24"
+   fill="none"
+   version="1.1"
+   id="svg1293"
+   sodipodi:docname="menu-chat.svg"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1297" />
+  <sodipodi:namedview
+     id="namedview1295"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="26.333333"
+     inkscape:cx="11.981013"
+     inkscape:cy="12"
+     inkscape:window-width="1368"
+     inkscape:window-height="860"
+     inkscape:window-x="-6"
+     inkscape:window-y="-6"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1293" />
+  <path
+     style="color:#000000;fill:#c2cfe0;-inkscape-stroke:none"
+     d="M 4,2 C 2.90288,2 2,2.90288 2,4 v 18 l 4,-4 h 14 c 1.09712,0 2,-0.90288 2,-2 V 4 C 22,2.90288 21.09712,2 20,2 Z m 0,1.4003906 h 16 c 0.329679,0 0.599609,0.2699309 0.599609,0.5996094 v 12 c 0,0.329679 -0.26993,0.599609 -0.599609,0.599609 H 6 5.4199219 l -0.4101563,0.410157 -1.609375,1.609375 V 4 C 3.4003906,3.6703215 3.6703215,3.4003906 4,3.4003906 Z"
+     id="path1291" />
+</svg>

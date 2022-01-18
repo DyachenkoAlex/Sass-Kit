@@ -6,56 +6,120 @@
     background-color: #fff;
     box-shadow: 6px 0px 18px rgba(0, 0, 0, 0.06);
     z-index: 2;
-    &::before{
+    &::before {
         content: "";
         position: absolute;
-        top: 61px;
+        top: rem(61);
         left: 0;
         height: rem(1);
         width: 100vw;
-        background-color: $mainDarkerWhite;
+        background-color: $mainDivider;
     }    
     &__container {
         max-width: rem(256);
-        padding: 0 rem(24);
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        @include adaptiveValue("padding-right", 24, 12, 1440, 991.98, 1); 
+        @include adaptiveValue("padding-left", 24, 12, 1440, 991.98, 1); 
+    }
+    &__active {
+        min-width: rem(68);
+        width: rem(68);   
+        [class*="__link"],
+        [class*="__button"] {
+            justify-content: center;
+            span {
+                display: none;
+            }
+        }    
+        .sidebar {
+            &__container {
+                padding: 0 rem(11) rem(24) rem(11);
+            }
+        }
+        .site-name {
+            justify-content: center;
+        }    
+        .link-name {
+            &__full {
+                display: none;
+            }
+            &__short {
+                display: block;
+            }
+        }    
+        .sidebar-user {
+            margin: 0 rem(-2);
+            justify-content: center;
+            &__container {
+                padding: rem(24) rem(1); 
+            }
+            &__info {
+                display: none;
+            }
+        }
+        .sidebar-nav {
+            &__list {
+                &:hover {
+                    .sub-sidebar-nav__menu {
+                        display: none;
+                    }
+                }
+            }
+        }
+        .nav-divider {
+            width: rem(80);
+            margin-left: rem(-12);
+        }    
+        .sidebar-toggle {
+            padding: 0 0 rem(24) 0;
+            &__container {
+                flex-grow: 0;
+            }
+        }
     }
 }
-.site-name {
-    &__text{
+.site-name {        
+        position: relative;
+        height: rem(60);
+        width: 100%;
+        display: flex;
+        align-items: center;
+    &__link{
         font-family: "Open Sans", $fontFamily;
         font-size: rem(18);
         font-weight: 600;
         line-height: math.div(25, 18);
         color: $mainBlue;
     }
-    &__block {
-        position: relative;
-        height: rem(60);
-        width: 100%;
-        display: flex;
-        align-items: center;
-
+}
+.link-name {
+    &__full {
+        display: block;
+    }
+    &__short {
+        display: none;
     }
 }
-.sidebar-user {
-    &__container {
+.sidebar-user {            
         display: flex;
-        flex-grow: 1;
+        // flex-grow: 1;
+        height: 94px;
+        margin: 0;
         position: relative;        
-        padding: rem(24) 0;
-        overflow: hidden;
-    }
-
-    &__block {
+        overflow: hidden;   
+    &__container {           
+        display: flex; 
         position: relative;
         height: rem(46);
         max-width: rem(208);
-        display: flex;
+        padding: rem(24) rem(1) rem(24) rem(2);    
         gap: rem(16);
-
-        // overflow: hidden;
+        margin: 0;
+        // @include adaptiveValue("gap", 16, 4, 1440, 991.98, 1);
     }
-
     &__photo {
         // position: relative;
         display: inline-block;
@@ -63,8 +127,11 @@
         height: 46px;
         border-radius: 50%;
         overflow: hidden;
+        &:hover {
+            border: 1px solid #fff;
+            outline:  2px solid $mainBlue;
+        }
     }
-
     &__info {
         display: flex;
         flex-direction: column;
@@ -73,10 +140,22 @@
 }
 
 .photo-user {
+    &__link {
+        &:hover {
+            .sidebar-user__photo {
+                display: flex;
+            }
+        }
+    }
     &__image {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        &:hover {
+            .sidebar-user__photo {
+                display: flex;
+            }
+        }
     }
 }
 
@@ -85,6 +164,15 @@
     &__name {
         font-size: rem(14);
         line-height: math.div(21, 14);
+        transition: all .2s ease-out;
+        &:hover {
+            transition: all .2s ease-out;
+            color: $mainBlue;
+            span {
+                transition: all .2s ease-out;
+                color: $mainBlue;
+            }
+        }
     }
     &__email {
         font-size: rem(11);
@@ -93,36 +181,134 @@
         color: $mainGray;
     }
 }
-.name-user {
-
-    &__text {
-    }
-}
-.email-user {
-
-    &__text {
-    }
-}
 
 .sidebar-nav {
     position: relative;
-
+    padding: rem(16) 0 rem(24) 0;
     &__menu {
+        display: flex;
+        row-gap: rem(20);
+        flex-direction: column;
+        >li:hover .sub-sidebar-nav__menu {
+            display: flex;
+            transition: all 10s ease-out ;
+        }
     }
-
-    &__list {
-    }
-
     &__link {
+        display: flex;
+        gap: rem(14);
+        font-size: rem(20);
+        color: $mainIconGray;
+        transition: all .6s ease-out;
+        span {
+            font-size: rem(13);
+            line-height: math.div(19, 13);
+            letter-spacing: 0.01em;            
+            color: $mainDarkBlueText;
+            transition: all .6s ease-out;
+        }
+        &:hover {
+            transition: all .2s ease-out;
+            color: $mainBlue;
+            span {
+                transition: all .2s ease-out;
+                color: $mainBlue;
+            }
+        }
     }
+}
+.sub-sidebar-nav {
+    &__menu {
+        position: relative;        
+        display: none;
+        row-gap: rem(8);
+        flex-direction: column;
+        padding: rem(12) rem(22) 0 rem(34);
+        transition: all 10s ease-out ;
+    }
+    &__link {
+        padding-left: rem(16);
+        position: relative;      
+        font-weight: 400;
+        font-size: rem(13);
+        line-height: math.div(19, 13);
+        letter-spacing: 0.01em;  
+        transition: all .6s ease-out;
+        &:hover {
+            transition: all .2s ease-out;
+            color: $mainBlue;
+        }
+    }
+}
+.circle__green::before,
+.circle__yellow::before,
+.circle__red::before,
+.circle__purple::before {
+    content: "";
+    position: absolute;
+    top: 32%;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    background-color: #fff;        
+    border-radius: 50%;
+}
+.circle {
+    &__green::before { 
+        border: 2px solid $mainGreen;
+    }
+    &__yellow::before {
+        border: 2px solid $mainYellow;            
+    }    
+    &__red::before {
+        border: 2px solid $mainRed;            
+    }
+    &__purple::before {
+        border: 2px solid $mainPurple;
+    }
+}
+
+.nav-divider {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: rem(280);
+    flex-shrink: 0;
+    margin-left: rem(-24);  // cant add a negative variable :/
+    height: rem(1);
+    background-color: $mainDivider;
 }
 .sidebar-settings {
-
-    &__link {
-    }
+    padding-top: rem(24);
 }
 .sidebar-toggle {
-
-    &__link {
+    display: flex;
+    position: relative;
+    padding: 0 rem(31) rem(22) rem(3);
+    flex-grow: 1;
+    color: $mainGray;
+    &__container {
+        display: flex;
+        align-items: flex-end;
+        flex-grow: 1;
+        padding: 0;
+    }
+    &__button {
+        display: inherit;
+        align-items: center;
+        gap: rem(14);
+        font-size: rem(11);
+        line-height: math.div(16, 11);
+        letter-spacing: 0.01em;
+        transition: all .2s ease-out;
+        &:hover {
+            transition: all .2s ease-out;
+            color: $mainBlue;
+            span {
+                transition: all .2s ease-out;
+                color: $mainBlue;
+            }
+        }
     }
 }
