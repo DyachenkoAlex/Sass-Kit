@@ -9,6 +9,7 @@
 		align-items: center;
 		margin: 0;
 		flex-grow: 1;
+		box-sizing: border-box;
 	}
 	&__block {	
 		position: relative;

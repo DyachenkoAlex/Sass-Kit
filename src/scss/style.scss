@@ -38,7 +38,7 @@ $minWidth: 320;
 // Ширина полотна (макета)
 $maxWidth: 1440;
 // Ширина ограничивающего контейнера (0 = нет ограничения)
-$maxWidthContainer: 1110;
+$maxWidthContainer: 0;
 // Общий отступ у контейнера
 // (30 = по 15px слева и справа, 0 = нет отступа)
 $containerPadding: 76;
@@ -81,7 +81,7 @@ body {
   overflow: hidden;
   // Прижимаем footer
   > main {
-    // flex: 1 1 auto;
+    flex: 1 1 auto;
   }
   // Фикс для слайдеров
   > * {
@@ -100,11 +100,11 @@ body {
 @if ($responsiveType==1) {
   // Отзывчивая
   [class*="__container"] {
-    @if ($maxWidthContainer>0) {
-      max-width: rem($maxWidthContainer);
+    // @if ($maxWidthContainer>0) {
+    //   max-width: rem($maxWidthContainer);
       box-sizing: content-box;
       margin: 0 auto;
-    }
+    // }
     @if ($containerPadding>0) {
       padding: 0 rem(math.div($containerPadding, 2));
     }
